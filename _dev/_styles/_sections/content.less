@@ -1,0 +1,327 @@
+@import "../_misc/mixins";
+@import "../_misc/fonts";
+@text-color: #5c7b98;
+
+.page__content {
+  width: 740px;
+  float: right;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__description {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 76px;
+  background: url("/img/bg/line1.png") 0 0 repeat;
+
+}
+
+.slider__description-inner {
+  padding: 14px 20px;
+
+}
+
+.slider__description-title {
+  margin-bottom: 5px;
+
+  a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #00b9fe;
+    .elektra_light;
+  }
+}
+
+.slider__description-text {
+  font-size: 14px;
+  color: #ffffff;
+  .elektra_light;
+
+
+}
+
+
+.slider__list {
+  padding: 0px;
+}
+
+.slider_img {
+  display: block;
+}
+
+.slider {
+  position: relative;
+  margin-bottom: 40px;
+
+    .bx-prev, .bx-next {
+      position: absolute;
+      top: 50%;
+      width: 69px;
+      height: 34px;
+      margin-top: -34px / 2;
+      background: url("/img/icon/spritesheet1.png") 0 0 no-repeat;
+      color: #5c7b98;
+      .elektra_bold;
+      text-decoration: none;
+      line-height: 34px;
+      text-align: center;
+
+
+      &:hover {
+        color: #ffffff;
+
+      }
+    }
+    .bx-prev {
+      left: 13px;
+      background-position: -5px -93px;
+      padding-right: 13px;
+
+
+
+      &:hover {
+        background-position: -5px -49px;
+      }
+    }
+    .bx-next {
+      right: 13px;
+      background-position: -5px -137px;
+      padding-right: 9px;
+
+      &:hover {
+        background-position: -5px -5px;
+      }
+
+
+    }
+
+
+}
+
+.page-title {
+  text-align: center;
+  overflow: hidden;
+
+  .page-title__text {
+    .inlineblock;
+    font-size: 25px;
+    color: #5c7b98;
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 2000px;
+      top: 50%;
+      margin-top: -1px;
+      background: @text-color;
+      position: absolute;
+
+
+
+    }
+
+    &:before {
+      left: 100%;
+    }
+
+    &:after {
+      right: 100%;
+    }
+
+  }
+
+
+}
+
+.products__list {
+  padding-left: 0px;
+  margin-left: -25px;
+  .clearfix;
+
+}
+
+.products__item {
+  box-sizing: border-box;
+  padding: 10px;
+float: left;
+  margin-left: 23px;
+  width: 230px;
+  .transition(2s);
+  border: 1px solid #dbe2eb;
+
+  &:hover {
+    .box-shadow(0 0 8px 0 rgba(00,00,00, .5));
+
+    .products__item-text {
+      color: #613993;
+
+    }
+}
+
+.products__item-inner {
+  padding: 20px 10px;
+
+
+  }
+
+
+}
+.products__title {
+  .clearfix;
+}
+
+.products__title-pic {
+  float: left;
+  width: 82px;
+  height: 90px;
+  position: relative;
+
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.products__title-text-wrap {
+  float: right;
+  width: 115px;
+}
+.products__title-text {
+  .elektra_light;
+  display: table-cell;
+  vertical-align: middle;
+  width: 115px;
+  height: 90px;
+  font-size: 15px;
+  line-height: 17px;
+  color: #00b9fe;
+  .transition( .5s);
+  text-decoration: underline;
+
+     &:hover {
+       color: #613993;
+     }
+
+}
+.products_option-list {
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+
+.products__option-key, .products__option-value {
+  width: 90px;
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+  color: @text-color;
+  .elektra_light;
+
+}
+.products__option-value {
+  width: 100px;
+  float: right;
+
+}
+
+.feedback__row-select  {
+  .selectbox(51px, 26px, 26px, url('/img/icon/select.png'));
+  .selectbox__btn-icon {
+    background-color: #00b9fe;
+  }
+  .selectbox__dropdown-list {
+    padding-left: 0px;
+
+  }
+  .selectbox__dropdown {
+    max-height: 240px;
+    overflow: auto;
+
+  }
+
+
+}
+
+.feedback__row-select2 {
+  .selectbox(51px, 26px, 26px, url('/img/icon/select.png'));
+  .selectbox__btn-icon {
+    background-color: #00b9fe;
+  }
+  .selectbox__dropdown-list {
+    padding-left: 0px;
+
+  }
+  .selectbox__dropdown {
+    max-height: 240px;
+    overflow: auto;
+
+  }
+
+}
+
+.jspVerticalBar, .jspTrack {
+  background-color: transparent !important;
+}
+.jspDrag {
+  background-color: #00b9fe;
+  width: 7px;
+  float: left;
+
+}
+
+
+.topbutton {
+  width:77px;
+  height: 34px;
+  background: #00b9fe;
+  text-align:center;
+  position:fixed;
+  bottom:250px;
+  right:50px;
+  cursor:pointer;
+  color:#FFF;
+  .elektra_bold;
+  font-size:17px;
+  text-decoration: none;
+  line-height: 35px;
+
+
+
+}
+
+.topbutton:after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid #00b9fe;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top:  -5px;
+  left: 32px;
+}
+
+.topbutton:before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  bottom:  0px;
+  left: 32px;
+}
+
+

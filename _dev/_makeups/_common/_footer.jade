@@ -1,0 +1,38 @@
+footer(role='contentinfo').footer
+    .container
+        .footer__logo
+            img(src="/img/logo/logo2.png").footer__logo-img
+            .footer__logo-text Эплшоп
+        .footer__options
+             ul.footer_options-list
+                 li.footer_options-item
+                    .footer_options-title О магазине
+                     ul.footer_menu
+                         each title in ["О нас","Наши цены","Скидки","Акции"]
+                             li.footer_menu-item
+                                 a(href="#").footer_menu-link=title
+                 li.footer_options-item
+                     .footer_options-title Каталог
+                     ul.footer_menu
+                         each title in ["Планшеты","Смартфоны","Компьютеры","Аксесуары"]
+                             li.footer_menu-item
+                                 a(href="#").footer_menu-link=title
+                 li.footer_options-item
+                     .footer_options-title Контакты
+                     ul.footer_menu
+                         each title in ["Телефоны","Адреса","Карта проезда","Обратная связь"]
+                             li.footer_menu-item
+                                 a(href="#").footer_menu-link=title
+        .footer_socials
+            ul.footer_socials-list
+                li.footer_socials-item
+                    a(href="#").footer_socials-link
+                        img(src="/img/icon/as.png").footer_socials-img
+                li.footer_socials-item
+                    a(href="#").footer_socials-link
+                        img(src="/img/icon/gp.png").footer_socials-img
+            ul.footer_socials-icons
+                each social in ['vk','tw','fb']
+                    li(class=".footer_socials-icon footer_socials-icon" + social)
+                        a.footer_socials-network
+

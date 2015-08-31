@@ -1,0 +1,172 @@
+@import "../_misc/mixins";
+@import "../_misc/fonts";
+@text-color: #5c7b98;
+
+.page {
+  .container {
+    .clearfix;
+  }
+}
+.page__sitebar {
+  float: left;
+  width: 230px;
+  margin-top: 12px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 25px;
+
+}
+
+.logo__img {
+  max-height: 52px;
+  max-width: 215px;
+  display: block;
+
+}
+.logo_text {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.feedback {
+  background: #f4f6f9;
+
+}
+.feedback_inner {
+  padding: 14px 10px;
+
+
+}
+
+.feedback__row {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.feedback__title {
+  color: @text-color;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.feedback__row-title {
+  .elektra_light;
+  .inlineblock;
+  width: 75px;
+  font-size: 14px;
+
+  line-height: 30px;
+  color: @text-color;
+}
+
+.feedback__row-title2 {
+  .elektra_light;
+  .inlineblock;
+  width: 85px;
+  font-size: 14px;
+
+  line-height: 30px;
+  color: @text-color;
+}
+
+.feedback__row-input {
+  .input-text(135px);
+  float: right;
+}
+.feedback__row-select-wrap {
+  .inlineblock;
+  float: right;
+}
+.feedback__textarea {
+  margin-bottom: 15px;
+  .input-text(200px);
+  height: 69px;
+  resize: none;
+}
+
+.feedback__form-submit {
+  background: #00b9fe;
+  margin: 0;
+  padding: 0;
+  width: 90px;
+  height: 35px;
+  .inlineblock;
+  font-size: 15px;
+  .elektra_bold;
+  border: 0 none;
+  color: #FFF;
+
+}
+
+.feedback__form-clear {
+  .inlineblock;
+  text-decoration: none;
+  width: 90px;
+  height: 35px;
+  line-height: 35px;
+  background: #dae1ed;
+  text-align: center;
+  margin-left: 20px;
+  color: #FFF;
+  font-size: 15px;
+
+}
+
+.pictures {
+  padding: 0;
+}
+
+.pictures_list {
+  .clearfix;
+  margin-left: -10px;
+  padding-left: 0px;
+
+
+
+}
+
+.pictures__item {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+
+
+}
+
+
+.contacts {
+  background: #f4f6f9;
+}
+
+.contacts__inner {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.contacts_address {
+  background: url("/img/icon/mark.png") 0 0 no-repeat;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5c7b98;
+  .elektra_light;
+
+
+}
+.contacts_phone {
+  .elektra_light;
+  .inlineblock;
+  background: url("/img/icon/phon.png") 0 0 no-repeat;
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5c7b98;
+  text-decoration: none;
+
+
+}
+

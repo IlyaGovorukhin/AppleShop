@@ -1,0 +1,99 @@
+extends ../_layouts/layout
+
+block title
+    title Main Page
+
+block content
+     .page
+        .container
+            .page__sitebar
+                a(href="#").logo
+                    img(src="/img/logo/header_logo.png").logo__img
+                    span.logo_text Эплшоп
+                .feedback
+                    .feedback_inner
+                            .feedback__title Запказать звонок
+                            .feedback__form
+                                form(action="", method="post")
+                                    label.feedback__row
+                                         .feedback__row-title Ваше имя
+                                         input(type="text",placeholder="Константин").feedback__row-input.feedback__row-input-phone
+                                    label.feedback__row
+                                         .feedback__row-title Ваше имя
+                                         input(type="text",placeholder="8(000)000-00-00").feedback__row-input.feedback__row-input-phone
+
+                                    label.feedback__row.feedback__row_double
+                                         .feedback__row-title2 Дата звонка
+                                         .feedback__row-select-wrap
+                                              select.feedback__row-select
+                                                 - for (var i = 1; i <=24; i++)
+                                                      option(value=i)=i
+                                              select.feedback__row-select2
+                                                 - for (var i = 1; i <=24; i++)
+                                                      option(value=i)=i
+                                    textarea(placeholder="Коментарий").feedback__textarea
+                                    .feedback__form-buttons
+                                        input(type="submit", value="Отправить").feedback__form-submit
+                                        a(href="#").feedback__form-clear Очистить
+                .pictures
+                     ul.pictures_list
+                          - for (var i = 0; i < 9; i++)
+                              li.pictures__item
+                                a(href="#").pictures__link
+                                    img(src="//lorempixel.com/70/70/nature/" + i).pictures__img
+                .contacts
+                    .contacts__inner
+                        .contacts_address г Москва ул. Болотная 666 офис 134
+                        a(href="tel:+89636935295").contacts_phone +89636935295
+            .page__content
+                .slider
+                    ul.slider__list
+
+                            li.slider__item
+                                img(src="/img/icon/e1.png" ).slider_img
+                                .slider__description
+                                    .slider__description-inner
+                                        .slider__description-title
+                                            a(href="#") Mak за полцены
+                                        .slider__description-text Принеси старый мак и получи скидку
+                            li.slider__item
+                                img(src="/img/icon/e2.png" ).slider_img
+                                .slider__description
+                                    .slider__description-inner
+                                        .slider__description-title
+                                             a(href="#") Mak за полцены
+                                        .slider__description-text Принеси старый мак и получи скидку
+                each section in ["Популярные товары","Товары со скидкой"]
+                    .products
+                        .page-title
+                                .page-title__text= section
+
+                            ul.products__list
+                                each title, indx in ['Apple thunderbolt Display', 'Imac27', 'Ipone 5s gold']
+                                    li.products__item
+                                        a(href="#").products__item-inner
+                                            .products__title
+                                                .products__title-pic
+                                                     img(src="/img/icon/" + indx + ".png")
+                                                 .products__title-text-wrap
+                                                     .products__title-text=title
+                                            .products__options
+                                                    ul.products_option-list
+                                                        li.products__option-item
+                                                            .products__option-key Артикул
+                                                            .products__option-value 45254698
+                                                        li.products__option-item
+                                                            .products__option-key Опция
+                                                            .products__option-value Включена
+                                                        li.products__option-item
+                                                            .products__option-key Цвет
+                                                            .products__option-value Серебристый
+                                                        li.products__option-item
+                                                            .products__option-key Размер
+                                                            .products__option-value 1380*1236*80
+                                                        li.products__option-item
+                                                            .products__option-key Вес
+                                                            .products__option-value 9кг
+
+                    a(href="#").topbutton Вверх
+
